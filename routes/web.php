@@ -25,6 +25,8 @@ Route::get('client/sign','Client\ClientController@sign');
 Route::get('client/sign2','Client\ClientController@sign2');
 Route::get('check','Client\ClientController@check');
 Route::get('aes','Client\ClientController@aes');
+Route::get('rsa2','Client\ClientController@rsa2');
+
 
 
 

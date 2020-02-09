@@ -163,4 +163,16 @@ class ClientController extends Controller
         // echo $d;
     }
 
+    public function rsa2(){
+        $str=request()->input('str');
+        $key=storage_path('key/pub.key');
+        $keys=openssl_pkey_get_public('file://'.$key);
+        // dump($keys);
+        $str=base64_decode($str);
+        openssl_public_decrypt($str,$s,$keys);
+        echo '解密后数据：'.$s;
+    }
+
+    
+
 }
